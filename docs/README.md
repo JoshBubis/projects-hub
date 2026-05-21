@@ -27,8 +27,26 @@ Open `http://localhost:8090` — the page loads `../data/status.json` via fetch 
 
 ## Server cron (optional)
 
+On `projects-server`:
+
 ```bash
-*/5 * * * * cd ~/projects-hub && .venv/bin/python poller/poll.py >> logs/poller.log 2>&1
+git clone https://github.com/JoshBubis/projects-hub.git ~/projects-hub
+cd ~/projects-hub
+python3 poller/poll.py
+```
+
+Cron (every 5 minutes):
+
+```bash
+*/5 * * * * cd /home/zjbird/projects-hub && /usr/bin/python3 poller/poll.py >> logs/poller.log 2>&1
+```
+
+View latest snapshot on the server:
+
+```bash
+cat ~/projects-hub/data/status.json
+python3 -m http.server 8090 --directory ~/projects-hub/dashboard --bind 127.0.0.1
+# then SSH tunnel: ssh -L 8090:127.0.0.1:8090 projects-tailscale
 ```
 
 ## Last updated
