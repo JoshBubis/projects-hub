@@ -1,0 +1,23 @@
+{
+  "poll_timeout_seconds": 15,
+  "apps": [
+    {
+      "id": "catamist",
+      "name": "Catamist",
+      "url": "https://catamist.com/health",
+      "admin_url": "https://catamist.com/admin/health"
+    },
+    {
+      "id": "hackychat",
+      "name": "HackyChat",
+      "url": "https://api.hackychat.com/health",
+      "admin_url": "https://api.hackychat.com/admin"
+    },
+    {
+      "id": "relayra",
+      "name": "Relayra",
+      "url": "https://relayra.com/up",
+      "admin_url": "https://relayra.com/admin/system"
+    }
+  ]
+}

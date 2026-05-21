@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-05-21T15:35:30.346105+00:00",
+  "overall_ok": true,
+  "apps": [
+    {
+      "id": "catamist",
+      "name": "Catamist",
+      "url": "https://catamist.com/health",
+      "admin_url": "https://catamist.com/admin/health",
+      "ok": true,
+      "http_status": 200,
+      "summary": "healthy",
+      "latency_ms": 3720,
+      "checked_at": "2026-05-21T15:35:30.346105+00:00"
+    },
+    {
+      "id": "hackychat",
+      "name": "HackyChat",
+      "url": "https://api.hackychat.com/health",
+      "admin_url": "https://api.hackychat.com/admin",
+      "ok": true,
+      "http_status": 200,
+      "summary": "healthy",
+      "latency_ms": 333,
+      "checked_at": "2026-05-21T15:35:30.346105+00:00"
+    },
+    {
+      "id": "relayra",
+      "name": "Relayra",
+      "url": "https://relayra.com/up",
+      "admin_url": "https://relayra.com/admin/system",
+      "ok": true,
+      "http_status": 200,
+      "summary": "<!DOCTYPE html><html><body style=\"background-color: green\"></body></html>",
+      "latency_ms": 302,
+      "checked_at": "2026-05-21T15:35:30.346105+00:00"
+    }
+  ]
+}
