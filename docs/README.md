@@ -41,12 +41,18 @@ Cron (every 5 minutes):
 */5 * * * * cd /home/zjbird/projects-hub && /usr/bin/python3 poller/poll.py >> logs/poller.log 2>&1
 ```
 
-View latest snapshot on the server:
+View from your laptop (Tailscale — no SSH tunnel needed):
 
 ```bash
-cat ~/projects-hub/data/status.json
-python3 -m http.server 8090 --directory ~/projects-hub/dashboard --bind 127.0.0.1
-# then SSH tunnel: ssh -L 8090:127.0.0.1:8090 projects-tailscale
+ssh projects-tailscale "cat ~/projects-hub/data/status.json"
+```
+
+Optional local dashboard via Tailscale + port forward:
+
+```bash
+ssh -L 8090:127.0.0.1:8090 projects-tailscale \
+  "python3 -m http.server 8090 --directory ~/projects-hub/dashboard --bind 127.0.0.1"
+# open http://localhost:8090
 ```
 
 ## Last updated
